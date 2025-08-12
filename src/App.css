@@ -1,11 +1,76 @@
-body{
- font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
 
-.notes{
+.notes {
+  display: flex;
+  justify-content: center;
+  padding: 24px 12px;
+}
+
+
+.note-form {
+  width: 360px;               
   display: flex;
   flex-direction: column;
-  width:100%;
-  align-items: center;
+  gap: 10px;
+}
+
+
+.title-field,
+.body-field {
+  width: 100%;
+  background: #fafafa;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 18px;
+  font-family: inherit;
+  color: #333;
+  outline: none;
+  resize: vertical;
+  transition: border-color 120ms ease, box-shadow 120ms ease, background 120ms ease;
+}
+
+
+.title-field { min-height: 44px; resize: none; }
+.body-field  { min-height: 140px; }
+
+
+.title-field:focus,
+.body-field:focus {
+  border-color: #339af0;
+  box-shadow: 0 0 0 3px rgba(51, 154, 240, 0.18);
+  background: #fff;
+}
+
+
+.title-field::placeholder,
+.body-field::placeholder {
+  color: #9aa0a6;
+  font-style: italic;
+  font-weight: 500;
+}
+
+
+.add-btn {
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-radius: 10px;
+  background: #1c7ed6;    
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(28, 126, 214, 0.25);
+  transition: transform 80ms ease, box-shadow 120ms ease, background 120ms ease;
+}
+
+.add-btn:hover {
+  background: #1971c2;
+  box-shadow: 0 6px 16px rgba(25, 113, 194, 0.28);
+}
+
+.add-btn:active {
+  transform: translateY(1px);
 }
 
 
@@ -13,8 +78,5 @@ body{
   display: grid;
   grid-template-columns: repeat(5, minmax(220px, 1fr));
   gap: 12px;
-  align-items: start;   
-  
+  align-items: start;
 }
-
-

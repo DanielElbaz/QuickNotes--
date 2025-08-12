@@ -1,19 +1,23 @@
 .note-card {
-  background: #fff8c4;
+  background: #efeeee;
   border: 1px solid #ddd;
   padding: 10px;
   margin: 8px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
 }
 
 .date-delete {
   display: flex;
-  justify-content: space-between; /* espace max entre date et croix */
+  justify-content: space-between;
   align-items: center;
 }
 
 .note-date {
+  font-size: 16px;
+  color: #666;
+}
+.note-updated {
   font-size: 16px;
   color: #666;
 }
@@ -29,4 +33,10 @@
 
 .delete-btn:hover {
   color: darkred;
+}
+
+.note-title {
+  margin: 5px 0;
+  font-weight: bold;
+  font-size: 16px;
 }
